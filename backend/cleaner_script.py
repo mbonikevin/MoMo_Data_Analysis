@@ -12,6 +12,8 @@ categorized_data = []
 unprocessed_messages = []
 
 # function to categorize the messages by checking simillar iddentifiers
+
+
 def categorize_sms(body):
     body_lower = body.lower()
 
@@ -66,6 +68,24 @@ def extract_amount(body):
         return int(match.group(1).replace(",", ""))
     return None
 
+# extracting the balance from the messages
+
+
+def extract_balance(body):
+    match = re.search(r"new balance[:\-]?\s*([\d,]+)", body, re.IGNORECASE)
+    if match:
+        return int(match.group(1).replace(",", ""))
+    return None
+
+# extracting transaction id from the messsages
+
+
+def extract_transaction_id(body):
+    match = re.search(
+        r"(Financial Transaction Id|Transaction ID)[:\-]?\s*(\d+)", body, re.IGNORECASE)
+    return match.group(2) if match else None
+
+
 # convert timestamp
 def convert_date(timestamp):
     try:
@@ -87,20 +107,18 @@ for sms in root.findall('sms'):
         if not category:
             raise ValueError("could not categorize")
 
-        amount = extract_amount(body)
-        date_iso = convert_date(date_raw)
-
         structured_sms = {
             "category": category,
-            "amount_rwf": amount,
-            "date": date_iso,
-            "raw_message": body
+            "amount_rwf": extract_amount(body),
+            "date": convert_date(date_raw),
+            "message": body,
+            "balance": extract_balance(body),
+            "transaction_id": extract_transaction_id(body)
         }
 
         categorized_data.append(structured_sms)
 
     except Exception as e:
-        # Log unprocessed messages
         unprocessed_messages.append({
             "body": sms.attrib.get("body", ""),
             "date": sms.attrib.get("date", ""),
@@ -116,6 +134,5 @@ with open("unprocessed_sms.log", "w", encoding="utf-8") as f:
     for msg in unprocessed_messages:
         f.write(json.dumps(msg, ensure_ascii=False) + "\n")
 
-print("data cleaned and categorized")
 print(
     f"processed: {len(categorized_data)} & unprocessed: {len(unprocessed_messages)}")
