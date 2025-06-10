@@ -71,7 +71,7 @@ def import_from_json(conn: sqlite3.Connection, json_file: str = "cleaned_sms.jso
         except sqlite3.Error as e:
             print(f"error: {e}")
     
-     # Commit all successful insertions to the database.
+     # commit all successful insertions to the database.
     conn.commit()
     return success_count
 
