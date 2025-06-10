@@ -12,8 +12,6 @@ categorized_data = []
 unprocessed_messages = []
 
 # function to categorize the messages by checking simillar iddentifiers
-
-
 def categorize_sms(body):
     body_lower = body.lower()
 
@@ -56,7 +54,6 @@ def categorize_sms(body):
 
     return None
 
-
 # this function will extract ammount and make it integer
 def extract_amount(body):
     # checking where meesages have [ <amount> RWF ]
@@ -69,8 +66,6 @@ def extract_amount(body):
     return None
 
 # extracting the balance from the messages
-
-
 def extract_balance(body):
     match = re.search(r"new balance[:\-]?\s*([\d,]+)", body, re.IGNORECASE)
     if match:
@@ -78,13 +73,16 @@ def extract_balance(body):
     return None
 
 # extracting transaction id from the messsages
-
-
 def extract_transaction_id(body):
     match = re.search(
         r"(Financial Transaction Id|Transaction ID)[:\-]?\s*(\d+)", body, re.IGNORECASE)
     return match.group(2) if match else None
 
+# here we extract phone number from the messages
+def extract_phone_number(body):
+    # Match phone numbers in various formats 
+    match = re.search(r'(?:\+?250|0)?(7[0-9]{8})\b', body)
+    return match.group(0) if match else None
 
 # convert timestamp
 def convert_date(timestamp):
@@ -92,7 +90,6 @@ def convert_date(timestamp):
         return datetime.fromtimestamp(int(timestamp)/1000).isoformat()
     except:
         return None
-
 
 # our main extraction loop
 for sms in root.findall('sms'):
@@ -113,7 +110,8 @@ for sms in root.findall('sms'):
             "date": convert_date(date_raw),
             "message": body,
             "balance": extract_balance(body),
-            "transaction_id": extract_transaction_id(body)
+            "transaction_id": extract_transaction_id(body),
+            "phone_number": extract_phone_number(body) 
         }
 
         categorized_data.append(structured_sms)
