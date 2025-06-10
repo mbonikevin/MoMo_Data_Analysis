@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* availeble fonts
+    - Inter
+    - Noto Sans JP
+    - Poppins
+*/
+
+:root {
+  --main_color: #078bff;
+  --card_bg: #f6f6f6;
+  --body_bg: #ffffff;
+  --text_color: #111111;
+  --text_color_weak: #737577;
+  --lines_color: #ececec;
+}
+
+body.dark {
+  --main_color: #078bff;
+  --card_bg: #2a2a2a;
+  --body_bg: #1a1a1a;
+  --text_color: #ffffff;
+  --text_color_weak: #b0b0b0;
+  --lines_color: #404040;
+}
+
+body{
+  color-scheme: light dark;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: var(--text_color);
+}
+
+button,
+a,
+ul,
+li {
+  list-style: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100svh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  background-color: var(--body_bg);
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+  transition: .1s;
+}
+
+.sidebar .bottom_links {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  gap: 4px;
+  padding-bottom: 16px;
+  margin-top: 10px;
+}
+
+.sidebar .logo {
+  width: 100%;
+  height: fit-content;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Poppins";
+  color: var(--text_color_weak);
+}
+
+.sidebar .section_title {
+  color: var(--text_color_weak);
+  margin-bottom: 6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.sidebar .link {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 11px;
+  color: var(--text_color_weak);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 7px;
+  transition: 0.3s;
+  &&:hover {
+    background-color: var(--card_bg);
+  }
+}
+
+.sidebar .link.no_hover {
+  user-select: none;
+  &&:hover {
+    background-color: transparent !important;
+  }
+}
+
+.sidebar .link div {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.sidebar .link div span {
+  font-size: 13px;
+  color: var(--text_color_weak);
+  padding: 3px 6px;
+  border-radius: 7px;
+  font-weight: 400;
+}
+
+.sidebar .link.small i {
+  font-size: 22px;
+  max-width: 20px;
+}
+
+.sidebar .separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--lines_color);
+  margin: 18px 0;
+}
+
+.sidebar .link i {
+  font-size: 20px;
+  color: var(--text_color_weak);
+}
+
+.sidebar .link.active,
+.sidebar .link.active i {
+  font-weight: 500;
+  background-color: var(--main_color);
+  color: white;
+  &&:hover {
+    background-color: var(--main_color);
+  }
+}
+
+/* Minimal toggle switch styles */
+.switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  overflow: clip;
+  background-color: transparent !important;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--lines_color);
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--main_color);
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+
+
+.content {
+  flex: 1;
+  height: 40000px;
+  background-color: var(--card_bg);
+  transition: .1s;
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "category": "Incoming Money",
+    "amount_rwf": 2000,
+    "date": "2024-05-10T16:30:58.724000",
+    "message": "You have received 2000 RWF from Jane Smith (*********013) on your mobile money account at 2024-05-10 16:30:51. Message from sender: . Your new balance:2000 RWF. Financial Transaction Id: 76662021700.",
+    "balance": 2000,
+    "transaction_id": "76662021700",
+    "phone_number": "*********013"
+  },
+  {
+    "category": "Payments to Code Holders",
+    "amount_rwf": 1000,
+    "date": "2024-05-10T16:31:46.754000",
+    "message": "TxId: 73214484437. Your payment of 1,000 RWF to Jane Smith 12845 has been completed at 2024-05-10 16:31:39. Your new balance: 1,000 RWF. Fee was 0 RWF.Kanda*182*16# wiyandikishe muri poromosiyo ya BivaMoMotima, ugire amahirwe yo gutsindira ibihembo bishimishije.",
+    "balance": 1000,
+    "transaction_id": null,
+    "phone_number": null
+  },
+  {
+    "category": "Payments to Code Holders",
+    "amount_rwf": 600,
+    "date": "2024-05-10T21:32:40.245000",
+    "message": "TxId: 51732411227. Your payment of 600 RWF to Samuel Carter 95464 has been completed at 2024-05-10 21:32:32. Your new balance: 400 RWF. Fee was 0 RWF.Kanda*182*16# wiyandikishe muri poromosiyo ya BivaMoMotima, ugire amahirwe yo gutsindira ibihembo bishimishije.",
+    "balance": 400,
+    "transaction_id": null,
+    "phone_number": null
+  },
+  {
+    "category": "Bank Deposits",
+    "amount_rwf": 40000,
+    "date": "2024-05-11T18:45:36.412000",
+    "message": "*113*R*A bank deposit of 40000 RWF has been added to your mobile money account at 2024-05-11 18:43:49. Your NEW BALANCE :40400 RWF. Cash Deposit::CASH::::0::250795963036.Thank you for using MTN MobileMoney.*EN#",
+    "balance": null,
+    "transaction_id": null,
+    "phone_number": null
+  },
+  {
+    "category": "Payments to Code Holders",
+    "amount_rwf": 2000,
+    "date": "2024-05-11T18:48:49.409000",
+    "message": "TxId: 17818959211. Your payment of 2,000 RWF to Samuel Carter 14965 has been completed at 2024-05-11 18:48:42. Your new balance: 38,400 RWF. Fee was 0 RWF.Kanda*182*16# wiyandikishe muri poromosiyo ya BivaMoMotima, ugire amahirwe yo gutsindira ibihembo bishimishije.",
+    "balance": 38400,
+    "transaction_id": null,
+    "phone_number": null
+  },
+  {
+    "category": "Transfers to Mobile Numbers",
+    "amount_rwf": 10000,
+    "date": "2024-05-11T20:34:55.316000",
+    "message": "*165*S*10000 RWF transferred to Samuel Carter (250791666666) from 36521838 at 2024-05-11 20:34:47 . Fee was: 100 RWF. New balance: 28300 RWF. Kugura ama inite cg interineti kuri MoMo, Kanda *182*2*1# .*EN#",
+    "balance": 28300,
+    "transaction_id": null,
+    "phone_number": "250791666666"
+  },
+  {
+    "category": "Transfers to Mobile Numbers",
+    "amount_rwf": 1000,
+    "date": "2024-05-12T03:47:40.264000",
+    "message": "*165*S*1000 RWF transferred to Samuel Carter (250790777777) from 36521838 at 2024-05-12 03:47:33 . Fee was: 20 RWF. New balance: 27280 RWF. Kugura ama inite cg interineti kuri MoMo, Kanda *182*2*1# .*EN#",
+    "balance": 27280,
+    "transaction_id": null,
+    "phone_number": "250790777777"
+  },
+  {
+    "category": "Payments to Code Holders",
+    "amount_rwf": 2000,
+    "date": "2024-05-12T11:41:35.734000",
+    "message": "*162*TxId:13913173274*S*Your payment of 2000 RWF to Airtime with token  has been completed at 2024-05-12 11:41:28. Fee was 0 RWF. Your new balance: 25280 RWF . Message: - -. *EN#",
+    "balance": 25280,
+    "transaction_id": null,
+    "phone_number": null
+  },
+  {
+    "category": "Payments to Code Holders",
+    "amount_rwf": 10900,
+    "date": "2024-05-12T13:26:20.213000",
+    "message": "TxId: 45434420466. Your payment of 10,900 RWF to Jane Smith 59543 has been completed at 2024-05-12 13:26:13. Your new balance: 14,380 RWF. Fee was 0 RWF.Kanda*182*16# wiyandikishe muri poromosiyo ya BivaMoMotima, ugire amahirwe yo gutsindira ibihembo bishimishije.",
+    "balance": 14380,
+    "transaction_id": null,
+    "phone_number": null
+  },
+  {
+    "category": "Payments to Code Holders",
+    "amount_rwf": 3500,
+    "date": "2024-05-12T13:34:32.603000",
+    "message": "TxId: 82113964658. Your payment of 3,500 RWF to Alex Doe 43810 has been completed at 2024-05-12 13:34:25. Your new balance: 10,880 RWF. Fee was 0 RWF.Kanda*182*16# wiyandikishe muri poromosiyo ya BivaMoMotima, ugire amahirwe yo gutsindira ibihembo bishimishije.",
+    "balance": 10880,
+    "transaction_id": null,
+    "phone_number": null
+  },
+  {
+    "category": "Payments to Code Holders",
+    "amount_rwf": 1000,
+    "date": "2024-05-12T17:58:34.868000",
+    "message": "TxId: 26614842768. Your payment of 1,000 RWF to Robert Brown 41193 has been completed at 2024-05-12 17:58:15. Your new balance: 9,880 RWF. Fee was 0 RWF.Kanda*182*16# wiyandikishe muri poromosiyo ya BivaMoMotima, ugire amahirwe yo gutsindira ibihembo bishimishije.",
+    "balance": 9880,
+    "transaction_id": null,
+    "phone_number": null
+  }
+]
