@@ -8,7 +8,7 @@
 
 :root {
   --main_color: #078bff;
-  --card_bg: #f6f6f6;
+  --card_bg: #f1f1f1;
   --body_bg: #ffffff;
   --text_color: #111111;
   --text_color_weak: #737577;
@@ -17,14 +17,14 @@
 
 body.dark {
   --main_color: #078bff;
-  --card_bg: #2a2a2a;
-  --body_bg: #1a1a1a;
+  --card_bg: #2c2c31;
+  --body_bg: #212225;
   --text_color: #ffffff;
   --text_color_weak: #b0b0b0;
   --lines_color: #404040;
 }
 
-body{
+body {
   color-scheme: light dark;
 }
 
@@ -58,6 +58,7 @@ li {
   justify-content: start;
 }
 
+/* sidebar */
 .sidebar {
   width: 260px;
   height: 100%;
@@ -69,7 +70,8 @@ li {
   flex-direction: column;
   gap: 4px;
   overflow-y: auto;
-  transition: .1s;
+  transition: 0.1s;
+  border-right: 1px solid var(--lines_color);
 }
 
 .sidebar .bottom_links {
@@ -111,7 +113,7 @@ li {
   padding: 10px 12px;
   font-size: 14px;
   font-weight: 400;
-  border-radius: 11px;
+  border-radius: 50px;
   color: var(--text_color_weak);
   display: flex;
   align-items: center;
@@ -125,8 +127,9 @@ li {
 
 .sidebar .link.no_hover {
   user-select: none;
+  cursor: pointer;
   &&:hover {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
   }
 }
 
@@ -220,11 +223,62 @@ li {
   transform: translateX(20px);
 }
 
-
-
+/* main content */
 .content {
   flex: 1;
-  height: 40000px;
+  height: fit-content;
+  min-height: 100svh;
   background-color: var(--card_bg);
-  transition: .1s;
+  transition: 0.1s;
+}
+
+/* navbar */
+.navbar {
+  width: 100%;
+  height: fit-content;
+  padding: 12px 20px;
+  background-color: var(--body_bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar h3 {
+  color: var(--text_color_weak);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.navbar .search_container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.navbar .search {
+  background-color: var(--card_bg);
+  height: 44px;
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 0 48px 0 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  &&::placeholder {
+    color: var(--text_color_weak);
+  }
+  &&:focus {
+    border-color: var(--lines_color);
+  }
+}
+
+.navbar .search_container i {
+  position: absolute;
+  top: 28%;
+  bottom: 0;
+  right: 16px;
+  margin: auto;
+  font-size: 20px;
+  color: var(--text_color_weak);
 }
