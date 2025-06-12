@@ -7,21 +7,29 @@
 */
 
 :root {
-  --main_color: #078bff;
+  --main_color: #377cf7;
   --card_bg: #f1f1f1;
   --body_bg: #ffffff;
   --text_color: #111111;
   --text_color_weak: #737577;
   --lines_color: #ececec;
+  --red: #ff0000;
+  --red_weak: #ff000017;
+  --green: #008000;
+  --green_weak: #00800017;
 }
 
 body.dark {
-  --main_color: #078bff;
+  --main_color: #377cf7;
   --card_bg: #2c2c31;
   --body_bg: #212225;
   --text_color: #ffffff;
   --text_color_weak: #b0b0b0;
   --lines_color: #404040;
+  --red: #ed7878;
+  --red_weak: #d371712f;
+  --green: #73bd73;
+  --green_weak: #74c57427;
 }
 
 body {
@@ -281,4 +289,67 @@ li {
   margin: auto;
   font-size: 20px;
   color: var(--text_color_weak);
+}
+
+.content_body {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* insight_cards */
+.grid {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: var(--body_bg);
+  border-radius: 24px;
+}
+
+.card {
+  background: var(--card_bg);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text_color_weak);
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.change {
+  font-size: 0.9rem;
+  margin-top: 12px;
+  color: var(--text_color_weak);
+}
+
+.up span {
+  color: var(--green);
+  background-color: var(--green_weak);
+  padding: 3px 5px 3px 7px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.down span {
+  color: var(--red);
+  background-color: var(--red_weak);
+  padding: 3px 5px 3px 7px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.change span {
+  margin-left: 0.3rem;
 }
