@@ -100,55 +100,40 @@
                             <section class="card">
                                 <div class="details">
                                     <h2>Total Incoming</h2>
-                                    <p class="value">600,839 <span>rwf</span></p>
-                                    <p class="change up"><span>↑ 5% </span>This month</p>
-                                </div>
-                                <div class="icon">
-                                    <i class='bx bx-wallet'></i>
+                                    <p id="incoming" class="value">0 <span>rwf</span></p>
+                                    <p class="change up">(Incoming Money + Bank Deposits)</p>
                                 </div>
                             </section>
 
                             <section class="card">
                                 <div class="details">
                                     <h2>Total Expenses</h2>
-                                    <p class="value">460 <span>rwf</span></p>
-                                    <p class="change down"><span>↓ 5%</span>This month</p>
-                                </div>
-                                <div class="icon">
-                                    <i class='bx bx-credit-card'></i>
+                                    <p id="expenses" class="value">0 <span>rwf</span></p>
+                                    <p class="change down">(Payments, Transfers, Withdrawals,...)</p>
                                 </div>
                             </section>
 
                             <section class="card">
                                 <div class="details">
                                     <h2>Net Balance Change</h2>
-                                    <p class="value">8,940 <span>rwf</span></p>
-                                    <p class="change up"><span>↑ 0.7%</span> This month</p>
-                                </div>
-                                <div class="icon">
-                                    <i class='bx bx-coin'></i>
+                                    <p id="net" class="value">0 <span>rwf</span></p>
+                                    <p class="change up">(Total Incoming - Total Expenses)</p>
                                 </div>
                             </section>
 
                             <section class="card">
                                 <div class="details">
                                     <h2>Cash Balance</h2>
-                                    <p class="value">568 <span>rwf</span></p>
-                                    <p class="change up"><span>↑ 2% </span>This month</p>
-                                </div>
-                                <div class="icon">
-                                    <i class='bx bx-money'></i>
+                                    <p id="cash" class="value">0 <span>rwf</span></p>
+                                    <p class="change up">(Current/latest balance)</p>
                                 </div>
                             </section>
 
                             <section class="card">
                                 <div class="details">
-                                    <h2>Cash Balance</h2>
-                                    <p class="value">568 <span>rwf</span></p>
-                                    <p class="change up"><span>↑ 2% </span>This month</p>
-                                </div>
-                                <div class="icon">
-                                    <i class='bx bx-money'></i>
+                                    <h2>Total Transactions</h2>
+                                    <p id="txs" class="value">0 <span>rwf</span></p>
+                                    <p class="change up">(all transactions)</p>
                                 </div>
                             </section>
                         </div>
@@ -159,7 +144,8 @@
                 </div>
                 <div class="bottom">
                     <div class="chart">
-                        <canvas class="payment_distribution_chart" width="400" height="400"></canvas>
+                        <canvas class="payment_distribution_chart"></canvas>
+                        <p class="tooltip">click on category name to fitler</p>
                     </div>
                 </div>
             </div>
@@ -172,6 +158,7 @@
     <script src="./js/monthly_summary.js"></script>
     <script src="./js/payments_and_deposits.js"></script>
     <script src="./js/fetchingStars.js"></script>
+    <script src="./js/calculations.js"></script>
     <script src="./js/themeSwitch.js"></script>
     <script>
     </script>
