@@ -1,4 +1,4 @@
-fetch("./js/dummy_data.json")
+fetch("http://localhost:3000/transactions")
   .then((res) => res.json())
   .then((rawData) => {
     const months = [
