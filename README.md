@@ -2,6 +2,10 @@
 
 This project, MoMo Data Analysis (MDA), processes SMS data from MTN MoMo, a mobile payment service in Rwanda, to extract, clean, and categorize transaction data, store it in a SQLite database, and visualize insights through an interactive web dashboard. The application is designed for MoMo users to gain detailed analytics on their spending and transaction patterns.
 
+### Walkthrough Video 
+
+Youtube link: [https://youtu.be/grxHxOvdWaU]
+
 ## Table of Contents
 
 - Project Overview
