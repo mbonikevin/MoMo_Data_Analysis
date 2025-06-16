@@ -83,23 +83,22 @@ Ensure modified_sms_v2.xml is in the backend/ directory.
 
 
 
-File Structure
 MoMo_Data_Analysis/
+├── AUTHORS
+├── README.md
 ├── backend/
-│   ├── cleaned_sms.json        # Cleaned transaction data in JSON format
-│   ├── cleaner_script.py       # Script for cleaning and categorizing SMS data
-│   ├── modified_sms_v2.xml     # Input XML file with SMS data
-│   ├── sms_data.py             # Script for parsing XML and inserting into database
-│   ├── transactions.db         # SQLite database file
-│   └── unprocessed_sms.log     # Log file for unprocessed SMS
+│   ├── cleaned_sms.json
+│   ├── cleaner_script.py
+│   ├── modified_sms_v2.xml
+│   ├── sms_data.py
+│   ├── transactions.db
+│   └── unprocessed_sms.log
 ├── frontend/
-│   ├── assets/                 # Static assets (e.g., images)
-│   ├── js/                     # JavaScript files for dashboard functionality
-│   ├── styles/                 # CSS files for styling
-│   ├── index.html              # Main dashboard page
-│   └── transactions.html       # Page for detailed transaction view
-├── AUTHORS                     # File listing team members
-├── README.md                   # This file
+│   ├── assets/
+│   ├── js/
+│   ├── styles/
+│   ├── index.html
+│   └── transactions.html
 
 Running the Application
 
