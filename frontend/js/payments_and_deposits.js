@@ -1,4 +1,4 @@
-fetch("./js/dummy_data.json")
+fetch("http://localhost:3000/transactions")
   .then((res) => res.json())
   .then((rawData2) => {
     const categoryTotals = {};
@@ -19,11 +19,17 @@ fetch("./js/dummy_data.json")
           {
             data: data,
             backgroundColor: [
-              "#1E88E5",
-              "#90CAF9",
+              "#D4B483",
+              "#C1666B",
               "#42A5F5",
-              "#BBDEFB",
-              "#64B5F6",
+              "#48A9A6",
+              "#5FA8D3",
+              "#F4A261",
+              "#E76F51",
+              "#2A9D8F",
+              "#264653",
+              "#E9C46A",
+              "#6A4C93",
             ],
           },
         ],
@@ -33,7 +39,15 @@ fetch("./js/dummy_data.json")
         plugins: {
           legend: {
             position: "top",
-            labels: { usePointStyle: true, boxWidth: 8 },
+            labels: {
+              usePointStyle: true,
+              boxWidth: 8,
+              color: "#9f9f9f",
+              font: {
+                size: 15,
+              },
+              padding: 20,
+            },
           },
           title: {
             display: true,

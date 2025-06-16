@@ -3,7 +3,7 @@ let data = [];
 // fetching data
 async function loadData() {
   try {
-    const res = await fetch("./js/dummy_data.json");
+    const res = await fetch("http://localhost:3000/transactions");
     if (!res.ok) throw new Error("fail to get data");
     data = await res.json();
     renderCategoryList();

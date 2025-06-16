@@ -435,7 +435,18 @@ li {
 
 .bottom .chart {
   width: 100%;
-  height: 400px;
+  height: fit-content;
+}
+
+.bottom .chart canvas {
+  height: 500px !important;
+  width: 500px !important;
+}
+
+.bottom .chart .tooltip {
+  font-size: 14px;
+  padding-top: 20px;
+  color: var(--text_color_weak);
 }
 
 /* tansactions */
@@ -587,5 +598,12 @@ li {
   }
   .navbar_logo .logo {
     display: flex;
+  }
+  .chart canvas{
+   height: auto !important; 
+  }
+  .bottom .chart canvas {
+    height: auto !important;
+    width: 100% !important;
   }
 }
